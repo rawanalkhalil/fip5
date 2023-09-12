@@ -1,3 +1,4 @@
+import 'package:fip5/config/app_color.dart';
 import 'package:fip5/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primarySwatch: Colors.blue,
+            primaryColor:AppColors.primaryColor ,
           ),
           home:const SplashScreen(),
         );
