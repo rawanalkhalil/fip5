@@ -62,36 +62,34 @@ class SharedPreferenceHelper {
   //   return prefs.getBool(key);
   // }
 
-  Future<void> read( // generic method
+  Future<dynamic> read( // generic method
           {required String key,
         required SaveType type}) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     switch (type) {
       case SaveType.boolType:
         {
-          prefs.getBool(key);
+      return prefs.getBool(key);
         }
-        break;
+
       case SaveType.stringType:
         {
-          prefs.getString(key);
+          return prefs.getString(key);
         }
-        break;
+
       case SaveType.intType:
         {
-          prefs.getInt(key);
+          return prefs.getInt(key);
         }
-        break;
       case SaveType.doubleType:
         {
-          prefs.getDouble(key);
+          return prefs.getDouble(key);
         }
-        break;
+
       case SaveType.stringListType:
         {
-          prefs.getStringList(key);
+          return prefs.getStringList(key);
         }
-        break;
     }
   }
 }

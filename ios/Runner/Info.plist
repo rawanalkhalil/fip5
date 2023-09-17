@@ -6,6 +6,12 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Fip5</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>i need to get a profile picture for the app</string>
+    <key>NSCameraUsageDescription</key>
+    <string>i need to get a profile picture for the app</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>i need to get a profile picture for the app</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

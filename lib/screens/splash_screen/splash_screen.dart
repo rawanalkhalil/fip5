@@ -55,10 +55,10 @@ class _SplashScreenState extends State<SplashScreen> {
   void _navigate(){
      Timer(const Duration(seconds: 5),()async{
        // Obtain shared preferences.
-       bool isIntroEnteredBefore= SharedPreferenceHelper().
+       bool isIntroEnteredBefore=await SharedPreferenceHelper().
        read(key: CacheKeys.introKey, type: SaveType.boolType) as bool;
        Fip5Navigtor.of(context).pushReplecment(
-          isIntroEnteredBefore ? const LoginScreen():  const IntroScreen());
+           isIntroEnteredBefore!= null && isIntroEnteredBefore ? const LoginScreen():  const IntroScreen());
      });
   }
 }
